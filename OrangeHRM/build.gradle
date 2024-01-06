@@ -24,6 +24,11 @@ dependencies {
 
 }
 
-//test {
+
+
+test {
 //    useJUnitPlatform()
-//}
+    useTestNG() {
+        suites "./src/test/resources/suite.xml"
+    }
+}

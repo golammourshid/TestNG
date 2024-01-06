@@ -1,0 +1,7 @@
+<suite thread-count = "1" verbose = "1" name = "Orange HRM Demo Portal Automation">
+    <test name = "Orange HRM demo portal login test">
+        <classes>
+            <class name = "testrunner.LoginTestRunner"/>
+        </classes>
+    </test>
+</suite>
