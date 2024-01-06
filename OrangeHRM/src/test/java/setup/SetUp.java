@@ -28,7 +28,7 @@ public class SetUp {
             Utils.takeScreenShot(driver);
         }
     }
-    @AfterTest
+//    @AfterTest
     public void closeDriver() {
         driver.close();
     }

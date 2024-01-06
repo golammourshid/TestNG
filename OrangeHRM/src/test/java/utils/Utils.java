@@ -18,4 +18,13 @@ public class Utils {
         File destFile = new File(fileWithPath);
         FileUtils.copyFile(screenShotFile, destFile);
     }
+
+    public static int generateRandomId(int min, int max) {
+        int rand = (int) (Math.random() * (max - min) + min);
+        return rand;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(generateRandomId(10, 15));
+    }
 }
