@@ -68,6 +68,11 @@ public class PIMPage {
         Thread.sleep(3000);
         btnSave.click();
 
-        Utils.saveInfo(firstName, lastName, userName, password);
+        UserModel model = new UserModel();
+        model.setFirstName(firstName);
+        model.setLastName(lastName);
+        model.setUserName(userName);
+        model.setPassword(password);
+        Utils.saveInfo(model);
     }
 }

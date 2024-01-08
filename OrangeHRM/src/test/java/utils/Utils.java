@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import page.UserModel;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -27,15 +28,15 @@ public class Utils {
         return rand;
     }
 
-    public static void saveInfo(String firstName, String lastName, String userName,String password ) throws IOException, ParseException {
+    public static void saveInfo(UserModel userModel) throws IOException, ParseException {
         JSONParser parser = new JSONParser();
         String filePath = "./src/test/resources/employees.json";
         JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(filePath));
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("firstName", firstName);
-        jsonObject.put("lastName", lastName);
-        jsonObject.put("userName", userName);
-        jsonObject.put("password", password);
+        jsonObject.put("firstName", userModel.getFirstName());
+        jsonObject.put("lastName", userModel.getLastName());
+        jsonObject.put("userName", userModel.getUserName());
+        jsonObject.put("password", userModel.getPassword());
 
         jsonArray.add(jsonObject);
 
