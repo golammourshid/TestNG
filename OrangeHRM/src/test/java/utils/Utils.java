@@ -1,12 +1,15 @@
 package utils;
 
 import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -24,7 +27,27 @@ public class Utils {
         return rand;
     }
 
-    public static void main(String[] args) {
-        System.out.println(generateRandomId(10, 15));
+    public static void saveInfo(String firstName, String lastName, String userName,String password ) throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        String filePath = "./src/test/resources/employees.json";
+        JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(filePath));
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("firstName", firstName);
+        jsonObject.put("lastName", lastName);
+        jsonObject.put("userName", userName);
+        jsonObject.put("password", password);
+
+        jsonArray.add(jsonObject);
+
+        System.out.println(jsonArray);
+
+        FileWriter writer = new FileWriter(filePath);
+        writer.write(jsonArray.toJSONString());
+        writer.flush();
+        writer.close();
     }
+
+//    public static void main(String[] args) throws IOException, ParseException {
+//        saveInfo();
+//    }
 }

@@ -1,6 +1,7 @@
 package page;
 
 import com.github.javafaker.Faker;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Utils;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class PIMPage {
     @FindBy(xpath = "//input[@class = 'oxd-input oxd-input--active']")
     List<WebElement> userCred;
     @FindBy(css = "[type=password]")
-    List<WebElement> password;
+    List<WebElement> passwordElem;
     @FindBy(className = "oxd-switch-input")
     WebElement loginDetailsSwitch;
     @FindBy(css = "[type=submit]")
@@ -40,27 +42,32 @@ public class PIMPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void createEmployee() throws InterruptedException {
+    public void createEmployee() throws InterruptedException, IOException, ParseException {
         Faker faker = new Faker();
         menuPIM.click();
         addBtnElem.click();
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String userName = faker.name().username() + Utils.generateRandomId(100, 999);
+        String password = "antor1234";
 
 //        First Name
-        fName.sendKeys(faker.name().firstName());
+        fName.sendKeys(firstName);
 //        Last Name
-        lName.sendKeys(faker.name().lastName());
+        lName.sendKeys(lastName);
         Thread.sleep(3000);
 
         loginDetailsSwitch.click();
 
 //        User Name
-        userCred.get(2).sendKeys(faker.name().username() + Utils.generateRandomId(100, 999));
+        userCred.get(2).sendKeys(userName);
 //        Password
-        password.get(0).sendKeys("antor1234");
+        passwordElem.get(0).sendKeys(password);
 //        Confirm Password
-        password.get(1).sendKeys("antor1234");
+        passwordElem.get(1).sendKeys(password);
         Thread.sleep(3000);
         btnSave.click();
 
+        Utils.saveInfo(firstName, lastName, userName, password);
     }
 }

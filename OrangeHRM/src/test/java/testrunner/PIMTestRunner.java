@@ -1,5 +1,6 @@
 package testrunner;
 
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,6 +11,7 @@ import page.LoginPage;
 import page.PIMPage;
 import setup.SetUp;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class PIMTestRunner extends SetUp {
@@ -24,7 +26,7 @@ public class PIMTestRunner extends SetUp {
     }
 
     @Test
-    public void createEmployee() throws InterruptedException {
+    public void createEmployee() throws InterruptedException, IOException, ParseException {
         pimPage = new PIMPage(driver);
         pimPage.createEmployee();
 
