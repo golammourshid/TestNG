@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testrunner.PIMTestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-08T17:24:55" hostname="DESKTOP-4FCA5OE" time="19.064">
+  <properties/>
+  <testcase name="createEmployee" classname="testrunner.PIMTestRunner" time="19.064"/>
+  <system-out><![CDATA[[{"firstName":"Tawny","lastName":"Breitenberg","password":"antor1234","userName":"young.farrell951"},{"firstName":"Frank","lastName":"Kuvalis","password":"antor1234","userName":"catrina.murazik492"},{"firstName":"Jeremy","lastName":"Russel","password":"antor1234","userName":"jonathon.funk761"}]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

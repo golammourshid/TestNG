@@ -1,0 +1,1 @@
+{"uuid":"9890f255-b17a-4280-b30b-cfd7e5756aa2","name":"Login by New Employee","children":["b5d0621b-d0a4-4504-aea1-3bdad6ee3bc6"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1704734715013,"stop":1704734723425}],"afters":[],"start":1704734715013,"stop":1704734725988}

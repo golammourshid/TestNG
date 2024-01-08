@@ -29,8 +29,8 @@ public class Utils {
     }
 
     public static void saveInfo(UserModel userModel) throws IOException, ParseException {
-        JSONParser parser = new JSONParser();
         String filePath = "./src/test/resources/employees.json";
+        JSONParser parser = new JSONParser();
         JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(filePath));
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("firstName", userModel.getFirstName());
@@ -48,7 +48,15 @@ public class Utils {
         writer.close();
     }
 
+    public static JSONArray readJSONArray(String filePath) throws ParseException, IOException {
+//        String filePath = "./src/test/resources/employees.json";
+        JSONParser parser = new JSONParser();
+        return (JSONArray) parser.parse(new FileReader(filePath));
+    }
+
 //    public static void main(String[] args) throws IOException, ParseException {
-//        saveInfo();
+//        JSONArray empArray = readJSONArray();
+//        JSONObject empObj = (JSONObject) empArray.get(empArray.size()-1);
+//        System.out.println(empObj.get("userName"));
 //    }
 }
