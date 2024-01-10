@@ -1,1 +1,24 @@
-[{"firstName":"Tawny","lastName":"Breitenberg","password":"antor1234","userName":"young.farrell951"},{"firstName":"Frank","lastName":"Kuvalis","password":"antor1234","userName":"catrina.murazik492"}]
+[
+  {
+    "userName": "Admin",
+    "password": "admin123"
+  },
+  {
+    "firstName": "Tawny",
+    "lastName": "Breitenberg",
+    "password": "antor1234",
+    "userName": "young.farrell951"
+  },
+  {
+    "firstName": "Frank",
+    "lastName": "Kuvalis",
+    "password": "antor1234",
+    "userName": "catrina.murazik492"
+  },
+  {
+    "firstName": "Jeremy",
+    "lastName": "Russel",
+    "password": "antor1234",
+    "userName": "jonathon.funk761"
+  }
+]

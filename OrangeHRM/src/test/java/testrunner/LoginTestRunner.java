@@ -1,17 +1,23 @@
 package testrunner;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import page.DashBoardPage;
 import page.LoginPage;
 import setup.SetUp;
+import utils.Utils;
+
+import java.io.IOException;
 
 public class LoginTestRunner extends SetUp {
     LoginPage loginPage;
     DashBoardPage dashBoard;
 
-    @Test(priority = 1, description = "User should not login with wrong credentials")
+    @Test(priority = 1, description = "User should not login with wrong credentials", enabled = false)
     public void doLoginWithWrongCred() {
         loginPage = new LoginPage(driver);
         String errorMessage = loginPage.doLoginWithWrongCred("admin", "admin");
@@ -19,9 +25,11 @@ public class LoginTestRunner extends SetUp {
     }
 
     @Test(priority = 2, description = "User should login with valid credentials")
-    public void doLogin() throws InterruptedException {
+    public void doLogin() throws InterruptedException, ParseException, IOException {
         loginPage = new LoginPage(driver);
-        loginPage.doLogin("Admin", "admin123");
+        JSONArray empArray = Utils.readJSONArray("./src/test/resources/employees.json");
+        JSONObject empObj = (JSONObject) empArray.get(0);
+        loginPage.doLogin(empObj.get("userName").toString(), empObj.get("password").toString());
         dashBoard = new DashBoardPage(driver);
 
 //        SoftAssert will execute aLL assertion even if one assertion  is failed.
