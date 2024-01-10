@@ -7,8 +7,9 @@
     <list default="true" id="227183f7-17f5-493e-a156-6e5bb2cfa503" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testrunner/LoginTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testrunner/LoginTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/employees.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/employees.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/MasterSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/MasterSuite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,7 @@
       <workItem from="1704719494984" duration="1606000" />
       <workItem from="1704721130106" duration="6757000" />
       <workItem from="1704734658823" duration="1079000" />
-      <workItem from="1704897668053" duration="878000" />
+      <workItem from="1704897668053" duration="2216000" />
     </task>
     <servers />
   </component>

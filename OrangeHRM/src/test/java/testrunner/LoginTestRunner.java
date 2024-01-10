@@ -29,7 +29,11 @@ public class LoginTestRunner extends SetUp {
         loginPage = new LoginPage(driver);
         JSONArray empArray = Utils.readJSONArray("./src/test/resources/employees.json");
         JSONObject empObj = (JSONObject) empArray.get(0);
-        loginPage.doLogin(empObj.get("userName").toString(), empObj.get("password").toString());
+        if (System.getProperty("username") != null && System.getProperty("password") != null)
+            loginPage.doLogin(System.getProperty("username"), System.getProperty("password"));
+        else
+            loginPage.doLogin(empObj.get("userName").toString(), empObj.get("password").toString());
+
         dashBoard = new DashBoardPage(driver);
 
 //        SoftAssert will execute aLL assertion even if one assertion  is failed.

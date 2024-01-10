@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testrunner.LoginTestRunner" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-01-08T17:24:40" hostname="DESKTOP-4FCA5OE" time="8.834">
+<testsuite name="testrunner.LoginTestRunner" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-10T15:12:32" hostname="DESKTOP-4FCA5OE" time="7.652">
   <properties/>
-  <testcase name="doLoginWithWrongCred" classname="testrunner.LoginTestRunner" time="1.972"/>
-  <testcase name="doLogin" classname="testrunner.LoginTestRunner" time="5.636"/>
-  <testcase name="doLogout" classname="testrunner.LoginTestRunner" time="1.177"/>
+  <testcase name="doLogin" classname="testrunner.LoginTestRunner" time="6.32"/>
+  <testcase name="doLogout" classname="testrunner.LoginTestRunner" time="1.318"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

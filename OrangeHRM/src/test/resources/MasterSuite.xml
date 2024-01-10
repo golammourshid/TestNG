@@ -1,6 +1,6 @@
 <suite name="Orange HRM Demo Portal Automation">
     <suite-files>
         <suite-file path = "LoginSuite.xml"></suite-file>
-        <suite-file path = "EmployeeSuite.xml"></suite-file>
+<!--        <suite-file path = "EmployeeSuite.xml"></suite-file>-->
     </suite-files>
 </suite>

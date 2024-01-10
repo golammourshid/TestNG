@@ -35,10 +35,15 @@ dependencies {
 }
 
 
-
 test {
 //    useJUnitPlatform()
     useTestNG() {
+        if (project.hasProperty("username") && project.hasProperty("password")) {
+            systemProperties.put("username", project.property("username"))
+            systemProperties.put("password", project.property("password"))
+            print("From gradle: " + project.property("username"));
+            print("From gradle: " + project.property("password"));
+        }
         suites "./src/test/resources/masterSuite.xml"
     }
 }
