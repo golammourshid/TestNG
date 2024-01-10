@@ -14,7 +14,7 @@ import java.time.Duration;
 public class SetUp {
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeTest(groups = "smoke")
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -22,13 +22,13 @@ public class SetUp {
         driver.get("https://opensource-demo.orangehrmlive.com/");
     }
 
-    @AfterMethod
+    @AfterMethod(groups = "smoke")
     public void screenShot(ITestResult result) throws IOException {
         if(ITestResult.FAILURE == result.getStatus()){
             Utils.takeScreenShot(driver);
         }
     }
-//    @AfterTest
+    @AfterTest(groups = "smoke")
     public void closeDriver() {
         driver.close();
     }

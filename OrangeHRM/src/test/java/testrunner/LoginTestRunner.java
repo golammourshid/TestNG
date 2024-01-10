@@ -24,7 +24,7 @@ public class LoginTestRunner extends SetUp {
         Assert.assertTrue(errorMessage.contains("Invalid credentials"));
     }
 
-    @Test(priority = 2, description = "User should login with valid credentials")
+    @Test(priority = 2, description = "User should login with valid credentials", groups = "smoke")
     public void doLogin() throws InterruptedException, ParseException, IOException {
         loginPage = new LoginPage(driver);
         JSONArray empArray = Utils.readJSONArray("./src/test/resources/employees.json");

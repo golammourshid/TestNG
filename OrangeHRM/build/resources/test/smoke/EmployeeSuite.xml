@@ -1,0 +1,22 @@
+<suite thread-count = "1" verbose = "1" name = "Orange HRM Demo Portal Automation">
+    <test name = "Create New Employee">
+        <groups>
+            <run>
+                <include name = "smoke"> </include>
+            </run>
+        </groups>
+        <classes>
+            <class name = "testrunner.PIMTestRunner"/>
+        </classes>
+    </test>
+    <test name = "Login by New Employee">
+        <groups>
+            <run>
+                <include name = "smoke"> </include>
+            </run>
+        </groups>
+        <classes>
+            <class name = "testrunner.UserTestRunner"/>
+        </classes>
+    </test>
+</suite>

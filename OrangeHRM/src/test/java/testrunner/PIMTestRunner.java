@@ -19,13 +19,24 @@ public class PIMTestRunner extends SetUp {
 
     LoginPage loginPage;
 
-    @BeforeTest
+    @BeforeTest(groups = "smoke")
     public void doLogin() {
         loginPage = new LoginPage(driver);
         loginPage.doLogin("Admin", "admin123");
     }
 
-    @Test
+    @Test(priority = 1, description = "Apply for leave", groups = "smoke")
+    public void getLeave() throws InterruptedException {
+        driver.findElements(By.className("oxd-main-menu-item--name")).get(2).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[type='reset']")));
+        String txtActual = driver.findElement(By.cssSelector("[type='reset']")).getText();
+        System.out.println(txtActual);
+        String txtExpected = "Reset";
+        Assert.assertTrue(txtActual.contains(txtExpected));
+    }
+
+    @Test(priority = 2, description = "Create Employee")
     public void createEmployee() throws InterruptedException, IOException, ParseException {
         pimPage = new PIMPage(driver);
         pimPage.createEmployee();

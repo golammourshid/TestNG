@@ -1,7 +1,7 @@
 [
   {
-    "userName": "Admin",
-    "password": "admin123"
+    "password": "admin123",
+    "userName": "Admin"
   },
   {
     "firstName": "Tawny",
@@ -20,5 +20,41 @@
     "lastName": "Russel",
     "password": "antor1234",
     "userName": "jonathon.funk761"
+  },
+  {
+    "firstName": "Gonzalo",
+    "lastName": "Reichert",
+    "password": "antor1234",
+    "userName": "judy.berge534"
+  },
+  {
+    "firstName": "Dave",
+    "lastName": "Howell",
+    "password": "antor1234",
+    "userName": "dwana.abbott867"
+  },
+  {
+    "firstName": "Sharron",
+    "lastName": "Bogisich",
+    "password": "antor1234",
+    "userName": "rhea.cronin316"
+  },
+  {
+    "firstName": "Gerald",
+    "lastName": "McDermott",
+    "password": "antor1234",
+    "userName": "erna.mayer620"
+  },
+  {
+    "firstName": "Steve",
+    "lastName": "Bosco",
+    "password": "antor1234",
+    "userName": "kathlyn.muller689"
+  },
+  {
+    "firstName": "Barb",
+    "lastName": "Prohaska",
+    "password": "antor1234",
+    "userName": "raven.hammes778"
   }
 ]

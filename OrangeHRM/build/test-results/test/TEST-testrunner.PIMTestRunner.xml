@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testrunner.PIMTestRunner" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-10T17:35:54" hostname="DESKTOP-4FCA5OE" time="18.011">
+  <properties/>
+  <testcase name="getLeave" classname="testrunner.PIMTestRunner" time="3.215"/>
+  <testcase name="createEmployee" classname="testrunner.PIMTestRunner" time="14.793"/>
+  <system-out><![CDATA[Reset
+[{"password":"admin123","userName":"Admin"},{"firstName":"Tawny","lastName":"Breitenberg","password":"antor1234","userName":"young.farrell951"},{"firstName":"Frank","lastName":"Kuvalis","password":"antor1234","userName":"catrina.murazik492"},{"firstName":"Jeremy","lastName":"Russel","password":"antor1234","userName":"jonathon.funk761"},{"firstName":"Gonzalo","lastName":"Reichert","password":"antor1234","userName":"judy.berge534"},{"firstName":"Dave","lastName":"Howell","password":"antor1234","userName":"dwana.abbott867"},{"firstName":"Sharron","lastName":"Bogisich","password":"antor1234","userName":"rhea.cronin316"},{"firstName":"Gerald","lastName":"McDermott","password":"antor1234","userName":"erna.mayer620"},{"firstName":"Steve","lastName":"Bosco","password":"antor1234","userName":"kathlyn.muller689"},{"firstName":"Barb","lastName":"Prohaska","password":"antor1234","userName":"raven.hammes778"}]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
